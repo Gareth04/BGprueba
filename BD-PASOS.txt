@@ -1,0 +1,33 @@
+1.- Crear la base de datos
+CREATE TABLE Usuarios (
+    Id INT PRIMARY KEY,
+    Email NVARCHAR(100) NOT NULL,
+    PasswordHash NVARCHAR(200) NOT NULL,
+    Nombre NVARCHAR(100) NOT NULL,
+);
+
+CREATE TABLE Productos (
+    Id INT PRIMARY KEY,
+    Nombre NVARCHAR(100) NOT NULL,
+    Descripcion NVARCHAR(500),
+    Precio DECIMAL(10, 2) NOT NULL,
+    Stock INT NOT NULL,
+    Categoria NVARCHAR(50),
+    FechaCreacion DATETIME NOT NULL
+);
+
+Insercion de datos
+
+INSERT INTO Usuarios (Id, Email, PasswordHash, Nombre)
+VALUES
+    (1, 'usuario1@example.com', 'hashed_password_1', 'Usuario Uno'),
+    (2, 'usuario2@example.com', 'hashed_password_2', 'Usuario Dos'),
+    (3, 'usuario3@example.com', 'hashed_password_3', 'Usuario Tres');
+
+INSERT INTO Productos (Id, Nombre, Descripcion, Precio, Stock, Categoria, FechaCreacion)
+VALUES
+    (1, 'Smartphone XYZ', 'Teléfono inteligente de última generación', 599.99, 100, 'Electrónica', '2023-08-10 09:00:00'),
+    (2, 'Laptop ABC', 'Computadora portátil de alto rendimiento', 1299.99, 50, 'Informática', '2023-08-10 10:15:00'),
+    (3, 'Zapatillas Deportivas', 'Zapatillas cómodas para correr', 89.99, 200, 'Ropa y Calzado', '2023-08-10 11:30:00'),
+    (4, 'Reloj Elegante', 'Reloj de pulsera elegante para ocasiones especiales', 299.99, 30, 'Accesorios', '2023-08-10 12:45:00'),
+    (5, 'Juego de Mesa XYZ', 'Juego de mesa para toda la familia', 39.99, 80, 'Juguetes', '2023-08-10 13:00:00');
