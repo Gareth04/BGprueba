@@ -1,0 +1,53 @@
+.registro-info{
+    display: flex;
+    height: 30vh;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:start;
+    padding: 40px;
+
+}
+.random{
+    top: 0%;
+    width: 45%;
+    height: 500px;
+    background-color: #EEEEEE;
+    justify-content: center;
+}
+.randon .tabla{
+    margin-left: 100px;
+    width: 100%;
+}
+.table {
+    border-collapse:collapse;
+    width: 45%;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+.table .tabla {
+    background-color: #49525E;
+    color: #EEEEEE; 
+    height: 50px;
+    font-family: 'Lato';
+    font-weight: 700;   
+}
+.table button {
+    margin-top: 15px;
+    font-weight: 200;
+    border: none;
+    margin-left: 15px;
+    cursor: pointer;
+    width: 75px;
+    height: 45px;
+    border-radius: 3px;
+    background-color: #F6D187;
+    color: #49525E; 
+}
+.acciones {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Espacio entre la tabla y el botón */
+  }

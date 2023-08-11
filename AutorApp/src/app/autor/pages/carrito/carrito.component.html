@@ -1,0 +1,38 @@
+<div class="carrito-info">
+  <h2>Carrito de Compras</h2>
+  <table class="table table-hover">
+    <thead>
+      <tr class="tabla">
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Descripción</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Total</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of cart; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ item.product.nombre }}</td>
+        <td>{{ item.product.descripcion }}</td>
+        <td>{{ item.product.precio }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.product.precio * item.quantity }}</td>
+        <td>
+          <button (click)="removeItem(i)" class="btn btn-danger">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="user-info">
+    <h3>Información del Usuario</h3>
+    <p><strong>Nombre:</strong> {{ nombre }}</p>
+    <p><strong>Email:</strong> {{ email }}</p>
+    <p><strong>Teléfono:</strong> {{ telefono }}</p>
+  </div>
+
+  <!-- <button (click)="goToCheckout()">Continuar al Pago</button> -->
+</div>
